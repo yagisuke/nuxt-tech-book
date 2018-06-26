@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1>about</h1>
-    <nuxt-link to="/about">about</nuxt-link>
-    <nuxt-link to="/users">users</nuxt-link>
-    <nuxt-link to="/users/1">users detail</nuxt-link>
+    <ul>
+      <li><nuxt-link to="/about">about</nuxt-link></li>
+      <li><nuxt-link to="/users">users</nuxt-link></li>
+      <li><nuxt-link to="/users/1">users detail</nuxt-link></li>
+    </ul>
   </div>
 </template>
 
