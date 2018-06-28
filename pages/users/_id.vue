@@ -14,11 +14,13 @@ import { mapGetters } from 'vuex'
 export default {
   async asyncData({ params, store }) {
     const { id } = params
-    await store.dispatch('getUser', { id })
+    await store.dispatch('github/getUser', { id })
     return { id }
   },
   computed: {
-    ...mapGetters(['user'])
+    user() {
+      return this.$store.getters['github/user']
+    }
   }
 }
 </script>
