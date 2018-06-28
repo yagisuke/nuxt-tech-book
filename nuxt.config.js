@@ -27,7 +27,8 @@ module.exports = {
   ** modules
   */
   plugins: [
-    '~/plugins/axios'
+    '~/plugins/axios',
+    '~/plugins/logger'
   ],
   /*
   ** Middleware
