@@ -5,11 +5,6 @@
       <img :src="user.avatar_url" :alt="user.name" class="user-avatar">
       <span class="user-name">{{ user.name }}</span>
     </a>
-    <ul>
-      <li><nuxt-link to="/about">about</nuxt-link></li>
-      <li><nuxt-link to="/users">users</nuxt-link></li>
-      <li><nuxt-link to="/users/yagisuke">users detail</nuxt-link></li>
-    </ul>
   </div>
 </template>
 
