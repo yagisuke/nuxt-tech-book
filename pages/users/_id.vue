@@ -1,37 +1,57 @@
 <template>
   <div>
     <h1>users/{{ id }}</h1>
-    <p v-if="user">
-      <a :href="user.html_url" target="_blank">
-        <img :src="user.avatar_url" :alt="user.name" class="avatar">
-        {{ user.name }}
-      </a>
-    </p>
+    <a v-if="user" :href="user.html_url" target="_blank" class="user">
+      <img :src="user.avatar_url" :alt="user.name" class="user-avatar">
+      <span class="user-name">{{ user.name }}</span>
+    </a>
     <ul>
       <li><nuxt-link to="/about">about</nuxt-link></li>
       <li><nuxt-link to="/users">users</nuxt-link></li>
-      <li><nuxt-link to="/users/1">users detail</nuxt-link></li>
+      <li><nuxt-link to="/users/yagisuke">users detail</nuxt-link></li>
     </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  async asyncData({ params, app }) {
+  async asyncData({ params, store }) {
     const { id } = params
-    const user = await app.$axios.$get(`https://api.github.com/users/${id}`)
-    console.log(user)
-    return { id, user }
+    await store.dispatch('getUser', { id })
+    return { id }
+  },
+  computed: {
+    ...mapGetters(['user'])
   }
 }
 </script>
 
 <style scoped>
-.avatar {
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 24px 0;
+  padding: 24px 0;
+  text-decoration: none;
+  border-top: 10px solid #ccc;
+  border-bottom: 10px solid #ccc;
+}
+
+.user-avatar {
   width: 100px;
   height: auto;
+  margin: 0 24px;
   border-radius: 100%;
   background: gray;
+}
+
+.user-name {
+  font-size: 30px;
+  font-weight: 900;
+  color: #ccc;
 }
 </style>
 

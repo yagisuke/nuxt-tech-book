@@ -4,7 +4,7 @@
     <ul>
       <li><nuxt-link to="/about">about</nuxt-link></li>
       <li><nuxt-link to="/users">users</nuxt-link></li>
-      <li><nuxt-link to="/users/1">users detail</nuxt-link></li>
+      <li><nuxt-link to="/users/yagisuke">users detail</nuxt-link></li>
     </ul>
   </div>
 </template>
