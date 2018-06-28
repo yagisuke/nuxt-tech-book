@@ -30,6 +30,12 @@ module.exports = {
     '~/plugins/axios'
   ],
   /*
+  ** Middleware
+  */
+  router: {
+    middleware: ['redirector'],
+  },
+  /*
   ** Build configuration
   */
   build: {
