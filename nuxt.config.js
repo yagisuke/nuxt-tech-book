@@ -34,7 +34,7 @@ module.exports = {
   ** Middleware
   */
   router: {
-    middleware: ['redirector'],
+    middleware: ['auth', 'redirector'],
   },
   /*
   ** Build configuration
