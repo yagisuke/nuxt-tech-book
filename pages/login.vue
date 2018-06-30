@@ -2,12 +2,8 @@
   <div>
     <h1>Login</h1>
     <p>
-      <button @click="addCredential">
-        Set credential
-      </button>
-      <button @click="removeCredential">
-        Remove credential
-      </button>
+      <button @click="addCredential">Set credential</button>
+      <button @click="removeCredential">Remove credential</button>
     </p>
     <p>
       <a href="/">Move to home</a>
