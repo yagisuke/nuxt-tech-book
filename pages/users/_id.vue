@@ -9,9 +9,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
+  head() {
+    return {
+      title: `about: ${this.$route.params.id}` 
+    }
+  },
   async asyncData({ params, store }) {
     const { id } = params
     await store.dispatch('github/getUser', { id })

@@ -9,6 +9,11 @@
 import AppNavigation from '~/components/app-navigation'
 
 export default {
+  head() {
+    return {
+      titleTemplate: '%s | Nuxt Web Application'
+    }
+  },
   components: {
     AppNavigation
   }
