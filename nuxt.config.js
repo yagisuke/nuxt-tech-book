@@ -37,6 +37,15 @@ module.exports = {
     middleware: ['auth', 'redirector'],
   },
   /*
+  ** Middleware
+  */
+  head: {
+    title: 'HELLO, Nuxt Web APP :D',
+    htmlAttrs: {
+      lang: 'ja'
+    }
+  },
+  /*
   ** Build configuration
   */
   build: {
