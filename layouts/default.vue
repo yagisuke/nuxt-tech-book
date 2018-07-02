@@ -11,7 +11,7 @@ import AppNavigation from '~/components/app-navigation'
 export default {
   head() {
     return {
-      titleTemplate: '%s | Nuxt Web Application'
+      titleTemplate: '%s | Nuxt Tech Book'
     }
   },
   components: {
