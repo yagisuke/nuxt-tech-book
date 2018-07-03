@@ -21,8 +21,15 @@ module.exports = {
   ** modules
   */
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  axios: {
+    prefix: '/api/v2'
+  },
+  proxy: {
+    '/api/v2': 'http://qiita.com'
+  },
   /*
   ** plugins
   */

@@ -1,8 +1,17 @@
 <template>
   <div>
     <h1>users/{{ id }}</h1>
-    <a v-if="user" :href="user.html_url" target="_blank" class="user">
-      <img :src="user.avatar_url" :alt="user.name" class="user-avatar">
+    <a
+      v-if="user"
+      :href="user.html_url"
+      target="_blank"
+      class="user"
+      >
+      <img
+        :src="user.avatar_url"
+        :alt="user.name + 'さんのアバター画像'"
+        class="user-avatar"
+      >
       <span class="user-name">{{ user.name }}</span>
     </a>
   </div>
